@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication.Models.Response
+namespace MobileAppMyWorldEC.Models.Response
 {
     public class Entertainment_CentersViewModel
     {

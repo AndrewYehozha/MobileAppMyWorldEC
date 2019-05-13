@@ -9,18 +9,31 @@
     android:minWidth="25px"
     android:minHeight="25px">
 
+    <TextView
+        android:text="@string/title_textFieldAuth"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textView1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginTop="80dp"
+        android:textSize="30dp"
+        android:textStyle="bold|normal"
+        android:textColor="#ff050505"
+        android:textAlignment="center" />
+
     <EditText
         android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_marginTop="100.0dp"
+        android:layout_marginTop="150.0dp"
         android:layout_marginLeft="50.0dp"
         android:layout_marginRight="50.0dp"
-        android:id="@+id/editText1"
+        android:id="@+id/EmailTextLogIn"
         android:contextClickable="false"
-        android:hint="Email" />
+        android:hint="@string/title_email" />
 
     <EditText
         android:inputType="textPassword"
@@ -28,36 +41,39 @@
         android:layout_height="wrap_content"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_marginTop="180.0dp"
+        android:layout_marginTop="200.0dp"
         android:layout_marginLeft="50.0dp"
         android:layout_marginRight="50.0dp"
-        android:id="@+id/editText2"
-        android:hint="Password"/>
+        android:id="@+id/PasswordTextLogIn"
+        android:hint="@string/title_password"/>
 
     <Button
         android:text="@string/title_login"
         android:layout_width="match_parent"
         android:layout_height="45.0dp"
         android:id="@+id/button_login"
-        android:layout_marginTop="250.0dp"
+        android:layout_marginTop="270.0dp"
         android:layout_marginLeft="50.0dp"
         android:layout_marginRight="50.0dp"
         android:textSize="17dp"
         android:textStyle="normal"
         android:textColor="#ffffffff"
-        android:background="#ff161212"/>
+        android:background="#ff161212"
+        android:clickable="true" />
 
     <Button
         android:text="@string/title_registration"
         android:layout_width="match_parent"
         android:layout_height="45.0dp"
         android:id="@+id/button_registred"
-        android:layout_marginTop="310.0dp"
+        android:layout_marginTop="320.0dp"
         android:layout_marginLeft="50.0dp"
         android:layout_marginRight="50.0dp"
         android:background="#ff730101"
         android:textColor="#ffffffff"
         android:textStyle="normal"
-        android:textSize="17dp" />
+        android:textSize="17dp"
+        android:imeOptions="actionGo|normal"
+        android:clickable="true" />
 
 </RelativeLayout >

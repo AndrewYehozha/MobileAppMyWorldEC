@@ -6,5 +6,12 @@
   <string name="title_tickets">Билеты</string>
   <string name="title_my_cabinet">Мой кабинет</string>
   <string name="title_login">Войти</string>
-  <string name="title_registration">Регистрация</string>
+  <string name="title_registration">Зарегистрироваться</string>
+  <string name="title_textFieldAuth">Авторизация</string>
+  <string name="title_textFieldRegistred">Регистрация</string>
+  <string name="title_name">Имя</string>
+  <string name="title_surname">Фамилия</string>
+  <string name="title_email">Электонная почта</string>
+  <string name="title_password">Пароль</string>
+  <string name="title_errorFields">Заполните поля</string>
 </resources>

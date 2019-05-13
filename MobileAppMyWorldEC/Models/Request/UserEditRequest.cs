@@ -1,6 +1,6 @@
-﻿using WebApplication.Models.Response;
+﻿using MobileAppMyWorldEC.Models.Response;
 
-namespace WebApplication.Models.Request
+namespace MobileAppMyWorldEC.Models.Request
 {
     public class UserEditRequest : UserViewModel
     {  
