@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication.Models.Request
+namespace MobileAppMyWorldEC.Models.Request
 {
     public class Services_Entertainment_CentersRequest
     {

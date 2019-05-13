@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication.Models.Request
+namespace MobileAppMyWorldEC.Models.Request
 {
     public class UserRegistredRequest
     {

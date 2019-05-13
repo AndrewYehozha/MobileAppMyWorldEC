@@ -9,7 +9,7 @@ using Android.Widget;
 
 namespace MobileAppMyWorldEC
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     public class MainActivity : AppCompatActivity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
         TextView textMessage;
@@ -18,11 +18,11 @@ namespace MobileAppMyWorldEC
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.activity_login);
+            SetContentView(Resource.Layout.activity_main);
 
-            //textMessage = FindViewById<TextView>(Resource.Id.message);
-            //BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
-            //navigation.SetOnNavigationItemSelectedListener(this);
+            textMessage = FindViewById<TextView>(Resource.Id.message);
+            BottomNavigationView navigation = FindViewById<BottomNavigationView>(Resource.Id.navigation);
+            navigation.SetOnNavigationItemSelectedListener(this);
 
             //FindViewById<Button>(Resource.Id.navigation_preferences).Click += delegate
             //{

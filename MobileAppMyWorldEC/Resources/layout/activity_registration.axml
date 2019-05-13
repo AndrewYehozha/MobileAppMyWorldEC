@@ -1,9 +1,103 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_registred"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px"
-    android:id="@+id/relativeLayout1" >
+    android:minHeight="25px">
+
+    <TextView
+        android:text="@string/title_textFieldRegistred"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textView1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginTop="80dp"
+        android:textSize="30dp"
+        android:textStyle="bold|normal"
+        android:textColor="#ff050505"
+        android:textAlignment="center" />
+
+    <EditText
+        android:inputType="textAutoCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginTop="150.0dp"
+        android:layout_marginLeft="50.0dp"
+        android:layout_marginRight="50.0dp"
+        android:id="@+id/NameTextSignIn"
+        android:contextClickable="false"
+        android:hint="@string/title_name" />
+
+    <EditText
+        android:inputType="textAutoCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginTop="200.0dp"
+        android:layout_marginLeft="50.0dp"
+        android:layout_marginRight="50.0dp"
+        android:id="@+id/SurnameTextSignIn"
+        android:hint="@string/title_surname"/>
+
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginTop="250.0dp"
+        android:layout_marginLeft="50.0dp"
+        android:layout_marginRight="50.0dp"
+        android:id="@+id/EmailTextLogIn"
+        android:contextClickable="false"
+        android:hint="@string/title_email" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginTop="300.0dp"
+        android:layout_marginLeft="50.0dp"
+        android:layout_marginRight="50.0dp"
+        android:id="@+id/PasswordTextLogIn"
+        android:hint="@string/title_password"/>
+
+    <Button
+        android:text="@string/title_registration"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dp"
+        android:id="@+id/button_registred"
+        android:layout_marginTop="370.0dp"
+        android:layout_marginLeft="50.0dp"
+        android:layout_marginRight="50.0dp"
+        android:background="#ff161212"
+        android:textColor="#ffffffff"
+        android:textStyle="normal"
+        android:textSize="17dp"
+        android:imeOptions="actionGo|normal"
+        android:clickable="true" />
+
+    <Button
+        android:text="@string/title_login"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dp"
+        android:id="@+id/button_login"
+        android:layout_marginTop="420.0dp"
+        android:layout_marginLeft="50.0dp"
+        android:layout_marginRight="50.0dp"
+        android:textSize="17dp"
+        android:textStyle="normal"
+        android:textColor="#ffffffff"
+        android:background="#ff730101"
+        android:clickable="true"/>
 </RelativeLayout >

@@ -7,4 +7,11 @@
   <string name="title_my_cabinet">Мій кабінет</string>
   <string name="title_login">Увійти</string>
   <string name="title_registration">Зареєструватися</string>
+  <string name="title_textFieldAuth">Авторизація</string>
+  <string name="title_textFieldRegistred">Реєстрація</string>
+  <string name="title_name">Імя</string>
+  <string name="title_surname">Прізвище</string>
+  <string name="title_email">Електронна пошта</string>
+  <string name="title_password">Пароль</string>
+  <string name="title_errorFields">Заповніть поля</string>
 </resources>
