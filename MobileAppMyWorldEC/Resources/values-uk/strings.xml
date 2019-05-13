@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">MyWorldEC</string>
+  <string name="title_enterteinment_centers">Центри</string>
+  <string name="title_recommendations">Рекомендації</string>
+  <string name="title_preferences">Побажання</string>
+  <string name="title_tickets">Білети</string>
+  <string name="title_my_cabinet">Мій кабінет</string>
+  <string name="title_login">Увійти</string>
+  <string name="title_registration">Зареєструватися</string>
+</resources>

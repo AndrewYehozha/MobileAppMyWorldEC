@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_enterteinment_centers"
+        android:icon="@drawable/ic_enterteinment_centers_black_24dp"
+        android:title="@string/title_enterteinment_centers" />
+
+    <item
+        android:id="@+id/navigation_recommendations"
+        android:icon="@drawable/ic_recommendations_black_24dp"
+        android:title="@string/title_recommendations" />
+
+    <item
+        android:id="@+id/navigation_preferences"
+        android:icon="@drawable/ic_preferences_black_24dp"
+        android:title="@string/title_preferences" />
+    
+    <item
+        android:id="@+id/navigation_tickets"
+        android:icon="@drawable/ic_tickets_black_24dp"
+        android:title="@string/title_tickets" />
+    
+    <item
+        android:id="@+id/navigation_my_cabinet"
+        android:icon="@drawable/ic_my_cabinet_black_24dp"
+        android:title="@string/title_my_cabinet" />
+
+</menu>

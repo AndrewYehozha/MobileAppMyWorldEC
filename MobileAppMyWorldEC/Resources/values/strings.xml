@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyWorldEC</string>
+    <string name="title_enterteinment_centers">Centers</string>
+    <string name="title_recommendations">Recommendations</string>
+    <string name="title_preferences">Preferences</string>
+    <string name="title_tickets">Ticket</string>
+    <string name="title_my_cabinet">My cabinet</string>
+    <string name="title_login">Sign in</string>
+    <string name="title_registration">Sign up</string>
+</resources>
