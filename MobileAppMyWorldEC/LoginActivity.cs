@@ -17,7 +17,7 @@ using Android.Support.V7.App;
 
 namespace MobileAppMyWorldEC
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/title_textFieldAuth", Theme = "@style/AppTheme", MainLauncher = true)]
     public class LoginActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -69,7 +69,7 @@ namespace MobileAppMyWorldEC
         {
             try
             {
-                var responseString = await "http://localhost:60436/api/Auth/Authorization/".PostUrlEncodedAsync(model).ReceiveString();
+                var responseString = await (Data.URL + "Auth/Authorization/").PostUrlEncodedAsync(model).ReceiveString();
 
                 var success = JsonConvert.DeserializeObject<AuthorizationResponse>(responseString);
                 if (success.Success)

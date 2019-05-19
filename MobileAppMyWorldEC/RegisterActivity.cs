@@ -13,11 +13,12 @@ using Flurl.Http;
 using MobileAppMyWorldEC.Models.Request;
 using Newtonsoft.Json;
 using MobileAppMyWorldEC.Models.Response;
+using Android.Support.V7.App;
 
 namespace MobileAppMyWorldEC
 {
-    [Activity(Label = "@string/title_registration", Theme = "@style/AppTheme")]
-    public class RegisterActivity : Activity
+    [Activity(Label = "@string/title_textFieldRegistred", Theme = "@style/AppTheme")]
+    public class RegisterActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -72,7 +73,7 @@ namespace MobileAppMyWorldEC
         {
             try
             {
-                var responseString = await "http://localhost:60436/api/Auth/Registration/".PostUrlEncodedAsync(model).ReceiveString();
+                var responseString = await (Data.URL + "Auth/Registration/").PostUrlEncodedAsync(model).ReceiveString();
 
                 var success = JsonConvert.DeserializeObject<AuthorizationResponse>(responseString);
                 if (success.Success)
