@@ -1,5 +1,6 @@
 <resources>
   <string name="app_name">MyWorldEC</string>
+  <string name="title_mall_centers">Развлекательные центры</string>
   <string name="title_enterteinment_centers">Центры</string>
   <string name="title_recommendations">Рекомендации</string>
   <string name="title_preferences">Пожелания</string>
@@ -9,9 +10,21 @@
   <string name="title_registration">Зарегистрироваться</string>
   <string name="title_textFieldAuth">Авторизация</string>
   <string name="title_textFieldRegistred">Регистрация</string>
+  <string name="title_save">Сохранить</string>
   <string name="title_name">Имя</string>
   <string name="title_surname">Фамилия</string>
-  <string name="title_email">Электонная почта</string>
+  <string name="title_email">Эл. почта</string>
   <string name="title_password">Пароль</string>
   <string name="title_errorFields">Заполните поля</string>
+
+  <string name="title_country">Страна</string>
+  <string name="title_city">Город</string>
+  <string name="title_address">Адрес</string>
+  <string name="title_phone">Телефон</string>
+  <string name="title_birthday">Дата рождения</string>
+  <string name="title_data_registred">Дата регистрации</string>
+  <string name="title_bonus_score">Бонусные очки</string>
+  <string name="title_isBlocked">Аккаунт заблокирован</string>
+  <string name="title_children">Дети</string>
+  <string name="title_discount_cards">Скидочные карты</string>
 </resources>

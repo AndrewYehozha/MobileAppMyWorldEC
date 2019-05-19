@@ -8,6 +8,12 @@ namespace MobileAppMyWorldEC.Models.Response
 {
     public class UserViewModel
     {
+        public bool Success { get; set; }
+        public Data data { get; set; }
+    }
+
+    public class Data
+    {
         public int Id { get; set; }
 
         public string FirstName { get; set; }
