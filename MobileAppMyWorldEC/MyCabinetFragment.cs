@@ -13,6 +13,7 @@ using Android.Widget;
 using Flurl.Http;
 using Newtonsoft.Json;
 using MobileAppMyWorldEC.Models.Response;
+using MobileAppMyWorldEC.Models.Request;
 
 namespace MobileAppMyWorldEC
 {
@@ -43,10 +44,22 @@ namespace MobileAppMyWorldEC
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
             view = inflater.Inflate(Resource.Layout.fragment_MyCabinet, container, false);
 
-            Button btnLogIn = view.FindViewById<Button>(Resource.Id.SaveInfoUser);
-            btnLogIn.Click += delegate
+            Button btnSave = view.FindViewById<Button>(Resource.Id.SaveInfoUser);
+            btnSave.Click += delegate
             {
                 SaveChanges();
+            };
+
+            Button btnChildrens = view.FindViewById<Button>(Resource.Id.OpenChildrens);
+            btnChildrens.Click += delegate
+            {
+
+            };
+
+            Button btnDiscountCards = view.FindViewById<Button>(Resource.Id.OpenDiscountCards);
+            btnDiscountCards.Click += delegate
+            {
+
             };
 
             nameTextCabinet = view.FindViewById<EditText>(Resource.Id.NameTextCabinet);
@@ -64,58 +77,51 @@ namespace MobileAppMyWorldEC
         }
         private async void SaveChanges()
         {
-            if (nameTextCabinet.Text == "" || surnameTextCabinet.Text == "")
+            try
             {
-                Toast.MakeText(this.Context, cityTextCabinet.Text, ToastLength.Long).Show();
+                var model = new UserEditRequest
+                {
+                    Id = Data.UserId,
+                    FirstName = nameTextCabinet.Text,
+                    LastName = surnameTextCabinet.Text,
+                    Country = countryTextCabinet.Text,
+                    City = cityTextCabinet.Text,
+                    Address = addressTextCabinet.Text,
+                    Phone = phoneTextCabinet.Text,
+                    Email = emailTextCabinet.Text,
+                    Birsday = birthdayTextCabinet.Text
+                };
+
+                SendChanges(model);
             }
-            //else
-            //{
-            //    var model = new AuthorizationRequest
-            //    {
-            //        Email = emailField,
-            //        Password = passwordField
-            //    };
-
-            //    bool IsAuth = await Authorization(model);
-
-            //    if (IsAuth)
-            //    {
-            //        Intent nextActivity = new Intent(this, typeof(MainActivity));
-            //        StartActivity(nextActivity);
-            //    }
-            //}
+            catch { }
         }
 
-        //private async Task<bool> LoadInfoUser(AuthorizationRequest model)
-        //{
-        //    try
-        //    {
-        //        var responseString = await (Data.URL + "Auth/Authorization/").PostUrlEncodedAsync(model).ReceiveString();
+        private async Task SendChanges(UserEditRequest model)
+        {
+            try
+            {
+                var responseString = await ((Data.URL + "Users/EditUser/").WithHeader("Authorization", Data.Token).PostUrlEncodedAsync(model)).ReceiveString();
 
-        //        var success = JsonConvert.DeserializeObject<AuthorizationResponse>(responseString);
-        //        if (success.Success)
-        //        {
-        //            Data.Token = success.data.Token;
-        //            Data.UserId = success.data.UserId;
+                var success = JsonConvert.DeserializeObject<AuthorizationResponse>(responseString);
+                if (!success.Success)
+                {
+                    var error = JsonConvert.DeserializeObject<ErrorMessage>(responseString);
 
-        //            return true;
-        //        }
+                    Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(Context);
+                    alert.SetTitle("Warning " + error.ErrorNum);
+                    alert.SetMessage(error.ErrorMessages);
+                    alert.SetNeutralButton("OK", delegate
+                    {
+                        alert.Dispose();
+                    });
+                    alert.Show();
+                }
 
-        //        var error = JsonConvert.DeserializeObject<ErrorMessage>(responseString);
-
-        //        Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(this);
-        //        alert.SetTitle("Warning " + error.ErrorNum);
-        //        alert.SetMessage(error.ErrorMessages);
-        //        alert.SetNeutralButton("OK", delegate
-        //        {
-        //            alert.Dispose();
-        //        });
-        //        alert.Show();
-
-        //        return false;
-        //    }
-        //    catch { return false; }
-        //}
+                Toast.MakeText(Context, Resources.GetString(Resource.String.title_saveData), ToastLength.Long).Show();
+            }
+            catch { }
+        }
 
         private async Task LoadInfoUser()
         {

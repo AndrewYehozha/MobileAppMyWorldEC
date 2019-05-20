@@ -11,12 +11,14 @@
   <string name="title_textFieldAuth">Sign in</string>
   <string name="title_textFieldRegistred">Sign up</string>
   <string name="title_save">Save</string>
+  <string name="title_errorFields">Fill in the fields</string>
+  <string name="title_saveData">Data saved</string>
+
+
   <string name="title_name">Name</string>
   <string name="title_surname">Surname</string>
   <string name="title_email">Email</string>
   <string name="title_password">Password</string>
-  <string name="title_errorFields">Fill in the fields</string>
-
   <string name="title_country">Country</string>
   <string name="title_city">City</string>
   <string name="title_address">Address</string>
