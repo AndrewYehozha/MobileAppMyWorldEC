@@ -11,12 +11,14 @@
   <string name="title_textFieldAuth">Авторизація</string>
   <string name="title_textFieldRegistred">Реєстрація</string>
   <string name="title_save">Зберегти</string>
+  <string name="title_errorFields">Заповніть поля</string>
+  <string name="title_saveData">Дані збережені</string>
+
+
   <string name="title_name">Імя</string>
   <string name="title_surname">Прізвище</string>
   <string name="title_email">Ел. пошта</string>
   <string name="title_password">Пароль</string>
-  <string name="title_errorFields">Заповніть поля</string>
-
   <string name="title_country">Країна</string>
   <string name="title_city">Місто</string>
   <string name="title_address">Адреса</string>
